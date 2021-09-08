@@ -1,0 +1,11 @@
+.content {
+  padding: 20px;
+  .item {
+    text-align: left;
+    span {
+      display: inline-block;
+      padding: 0 5px;
+      text-align: center;
+    }
+  }
+}

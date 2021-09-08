@@ -1,0 +1,12 @@
+[
+  {
+    "name": "常规图标",
+    "code": "icon-general",
+    "children": [
+      {
+        "name": "简历解析",
+        "code": "parse"
+      }
+    ]
+  }
+]

@@ -1,0 +1,38 @@
+<?xml version="1.0" standalone="no"?>
+  <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+  <svg>
+  <metadata>
+  Created by font-carrier
+  </metadata>
+  <defs>
+  <font id="iconfont" horiz-adv-x="1024" vert-adv-y="1024" >
+    <font-face
+      
+      font-family="sceofont"
+      
+      font-weight="400"
+      
+      font-stretch="normal"
+      
+      units-per-em="1024"
+      
+      ascent="824"
+      
+      descent="200"
+      
+    />
+      <missing-glyph />
+
+      
+      <glyph glyph-name="x" unicode="&#x78;" horiz-adv-x="100"
+        d="M20 20 L50 20 L50 -20 Z" />
+      
+
+      
+      <glyph glyph-name="&#xe90e;" unicode="&#xE90E;" d="M0 812M0 812L910 812Q910 812 910 812L910 15.75Q910 15.75 910 15.75L0 15.75Q0 15.75 0 15.75L0 812Q0 812 0 812ZM170.625 243.25M170.625 243.25L739.375 243.25Q739.375 243.25 739.375 243.25L739.375-211.75Q739.375-211.75 739.375-211.75L170.625-211.75Q170.625-211.75 170.625-211.75L170.625 243.25Q170.625 243.25 170.625 243.25Z"  horiz-adv-x="910" vert-adv-y="1024"  />
+
+      
+
+  </font>
+  </defs>
+</svg>
