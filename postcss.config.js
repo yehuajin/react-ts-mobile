@@ -6,5 +6,11 @@ module.exports = {
         'nesting-rules': true,
       },
     },
+    'postcss-pxtorem': {
+      rootValue: 16,
+      unitPrecision: 5,
+      propWhiteList: [],
+      minPixelValue: 2,
+    },
   },
 };
