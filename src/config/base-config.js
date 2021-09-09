@@ -5,4 +5,5 @@ export default {
    * config/webpack.production.js:{output: {publicPath, path}}
    */
   basename: '/assets',
+  baseURL: '/',
 };
