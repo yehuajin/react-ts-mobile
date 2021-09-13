@@ -22,6 +22,13 @@ const cssLoaders = [
       importLoaders: 1, // 0 => 无loader(默认); 1 => postcss-loader; 2 => postcss-loader, sass-loader; 用于配置css-loader作用于@import 的资源之前有多少个loader
       modules: {
         auto: (resourcePath) => resourcePath.endsWith('.module.scss'),
+        // eslint-disable-next-line max-params
+        getLocalIdent: (context, localIdentName, localName, options) => {
+          if (localName.endsWith('-no-module')) {
+            const name = localName.replace('-no-module', '');
+            return name;
+          }
+        },
       },
     },
   },

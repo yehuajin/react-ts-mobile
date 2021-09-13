@@ -6,7 +6,7 @@ interface props {
 }
 const Home: FC<props> = (props) => {
   console.log(props);
-  return <div className={style.color}>home</div>;
+  return <div className={`${style.color} center`}>home</div>;
 };
 
 export default Home;
