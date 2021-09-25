@@ -10,7 +10,7 @@ module.exports = {
     assetModuleFilename: 'images/[name].[contenthash:5].bundle.[ext]', // 对应rules中图片文件资源中的type: 'asset'
     filename: 'scripts/[name].[contenthash:5].bundle.js',
     publicPath: '/assets/', // cdn使用
-    path: join(__dirname, './dist/assets'),
+    path: join(__dirname, '../dist/assets'),
   },
   // https://segmentfault.com/a/1190000039730567
   optimization: {
