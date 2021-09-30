@@ -1,14 +1,24 @@
 {
-  "presets": [
+  "presets": [["@babel/preset-env"], "@babel/preset-react", "@babel/preset-typescript"],
+  "plugins": [
     [
-      "@babel/preset-env"
-    ],
-    "@babel/preset-react",
-    "@babel/preset-typescript"
+      // 通过babel-plugin-import实现按需加载
+      "import",
+      {
+        "libraryName": "antd",
+        "libraryDirectory": "es",
+        "style": "css"
+      },
+      {
+        "libraryName": "antd-mobile",
+        "libraryDirectory": "es",
+        "style": "css"
+      }
+    ]
   ]
   // 代码分割的最佳方式
   // npm install babel-plugin-syntax-dynamic-import
-  // import("./math").then(math => { 
+  // import("./math").then(math => {
   //   console.log(math.add(16, 26));
   // });
   // "plugins": ["syntax-dynamic-import"]

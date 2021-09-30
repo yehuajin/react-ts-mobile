@@ -38,6 +38,7 @@
     "@typescript-eslint/parser": "^4.29.3",
     "autoprefixer": "^10.3.2",
     "babel-loader": "^8.2.2",
+    "babel-plugin-import": "^1.13.3",
     "clean-webpack-plugin": "^4.0.0-alpha.0",
     "copy-webpack-plugin": "^9.0.1",
     "css-loader": "^6.2.0",
@@ -70,6 +71,8 @@
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "antd": "^4.16.13",
+    "antd-mobile": "^2.3.4",
     "axios": "^0.21.1",
     "base-64": "^1.0.0",
     "klona": "^2.0.4",

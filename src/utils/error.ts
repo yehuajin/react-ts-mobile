@@ -1,4 +1,5 @@
 import { AxiosError } from 'axios';
+import { Toast } from 'antd-mobile';
 /**
  * 前端重新封装状态吗，对接口错误进行归类方便前端处理
  * 100 普通服务器端错误，直接将错误信息弹框显示
@@ -17,10 +18,10 @@ interface errorObj {
  * @param msg 错误信息
  */
 export function showErrorMsg(error: errorObj) {
-  const { code, msg } = error;
+  const { msg } = error;
   // 根据业务处理错误信息展示
-  console.log(code, msg);
-  alert(msg);
+  // console.log(code, msg);
+  Toast.fail(msg, 2);
 }
 
 /**
