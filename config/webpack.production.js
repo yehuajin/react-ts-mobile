@@ -3,14 +3,15 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const config = require('./index');
 
 module.exports = {
   mode: 'production',
   output: {
-    assetModuleFilename: 'images/[name].[contenthash:5].bundle.[ext]', // 对应rules中图片文件资源中的type: 'asset'
-    filename: 'scripts/[name].[contenthash:5].bundle.js',
+    assetModuleFilename: `${config.assets}/images/[name].[contenthash:5].bundle.[ext]`, // 对应rules中图片文件资源中的type: 'asset'
+    filename: `${config.assets}/scripts/[name].[contenthash:5].bundle.js`,
     publicPath: '/assets/', // cdn使用
-    path: join(__dirname, '../dist/assets'),
+    path: join(__dirname, '../dist'),
   },
   // https://segmentfault.com/a/1190000039730567
   optimization: {
@@ -74,7 +75,7 @@ module.exports = {
       patterns: [
         {
           from: resolve(__dirname, '../static'),
-          to: 'static',
+          to: resolve(__dirname, `../dist/${config.assets}`),
         },
       ],
     }),

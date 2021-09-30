@@ -1,3 +1,5 @@
+// lazy和Suspense不支持服务端渲染需要使用@loadable/component
+// import loadable from '@loadable/component'
 import React, { FC, Suspense } from 'react';
 import { BrowserRouter as Router, Switch, Route, RouteProps } from 'react-router-dom';
 import Loading from '@components/loading';

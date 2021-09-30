@@ -30,7 +30,13 @@ module.exports = {
   rules: {
     // 自定义您的规则
     // Customize your rules
-    'prettier/prettier': 'error',
+    // 'prettier/prettier': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        endOfLine: 'auto',
+      },
+    ],
     'func-names': 0,
     'no-underscore-dangle': 0,
     'no-unused-vars': [2, { args: 'none' }],

@@ -16,6 +16,7 @@ module.exports = {
     historyApiFallback: true, // 刷新页面会响应到index页面，避免出现404
     // contentBase: join(__dirname, '../dist/assets'), // 资源文件目录
     inline: true, // 模式 iframe，监听文件变化，自动刷新页面
+    // host: '0.0.0.0', // 使用ip访问
     port: prot,
     // node-notifier, webpack-build-notifier
     quiet: true, // 配合friendly-error-webpack-plugin

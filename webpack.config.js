@@ -11,6 +11,7 @@ const fs = require('fs');
 const themeVariables = lessToJs(
   fs.readFileSync(join(__dirname, './src/assets/css/theme.less'), 'utf8')
 );
+const config = require('./config/index');
 
 const cssLoaders = [
   // post-css-preset-env和@babel/preset-env一样解析最新的css语法
@@ -113,8 +114,12 @@ const webpackBaseConfig = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: _envFlag ? 'styles/[name].[contenthash:5].css' : 'styles/[name].css',
-      chunkFilename: _envFlag ? 'styles/[id].[contenthash:5].css' : 'styles/[id].css',
+      filename: _envFlag
+        ? `${config.assets}/styles/[name].[contenthash:5].css`
+        : `${config.assets}/styles/[name].css`,
+      chunkFilename: _envFlag
+        ? `${config.assets}/styles/[id].[contenthash:5].css`
+        : `${config.assets}/styles/[id].css`,
       ignoreOrder: true, // 忽略css文件引入的顺序，如果不设置在不能的js中引入css顺序不同就会产生警告
     }),
   ],
