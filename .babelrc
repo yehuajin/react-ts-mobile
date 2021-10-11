@@ -6,14 +6,20 @@
       "import",
       {
         "libraryName": "antd",
-        "libraryDirectory": "es",
+        "libraryDirectory": "lib",
         "style": "css"
       },
+      "antd"
+    ],
+    [
+      // 通过babel-plugin-import实现按需加载
+      "import",
       {
         "libraryName": "antd-mobile",
-        "libraryDirectory": "es",
+        "libraryDirectory": "lib",
         "style": "css"
-      }
+      },
+      "antd-mobile"
     ]
   ]
   // 代码分割的最佳方式
