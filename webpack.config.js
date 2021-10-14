@@ -49,6 +49,7 @@ const webpackBaseConfig = {
   },
   output: {
     path: join(__dirname, './dist'),
+    clean: true,
   },
   module: {
     rules: [
