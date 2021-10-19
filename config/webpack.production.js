@@ -24,16 +24,18 @@ module.exports = {
       maxAsyncRequests: 5,
       maxInitialRequests: 3,
       name: false,
+      moduleIds: 'deterministic',
       cacheGroups: {
-        commons: {
-          chunks: 'initial', // 同步代码
-          minChunks: 2, // 至少引用2次
-          name: 'commons',
-        },
-        // vendors: {
-        //   test: /[\\/]node_modules[\\/]/,
-        //   priority: -10,
+        // commons: {
+        //   chunks: 'initial', // 同步代码
+        //   minChunks: 2, // 至少引用2次
+        //   name: 'commons',
         // },
+        vendor: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
         // default: {
         //   minChunks: 2,
         //   priority: -20,
@@ -57,6 +59,7 @@ module.exports = {
       }),
     ],
   },
+  devtool: 'source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack-ts-demo',

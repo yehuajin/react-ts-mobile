@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const notifier = require('node-notifier');
 // const ICON = join(__dirname, 'icon.png');
-const prot = 8082;
+const prot = 8080;
 
 module.exports = {
   mode: 'development',
@@ -34,7 +34,7 @@ module.exports = {
       },
     },
   },
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack-ts-demo',
