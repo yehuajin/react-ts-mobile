@@ -60,6 +60,7 @@ module.exports = {
     ],
   },
   devtool: 'source-map',
+  target: ['web', 'es5'],
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack-ts-demo',

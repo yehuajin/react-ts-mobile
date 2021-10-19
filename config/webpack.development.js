@@ -34,7 +34,7 @@ module.exports = {
       },
     },
   },
-  devtool: 'inline-source-map',
+  devtool: 'eval-source-map',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack-ts-demo',
