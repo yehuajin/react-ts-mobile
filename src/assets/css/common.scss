@@ -19,11 +19,13 @@ img {
   padding: 0;
   border: medium none;
 }
+
 /* 重置列表元素 */
 ul,
 li {
   list-style: none;
 }
+
 body {
   background-color: white;
   font-size: 16px;
@@ -32,12 +34,14 @@ body {
     'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial, sans-serif,
     'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
-/*文字省略号*/
+
+/* 文字省略号 */
 .text-ellipsis {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 // 去掉mac safari浏览器input右边的小图标/小按钮
 input::-webkit-contacts-auto-fill-button {
   visibility: hidden;

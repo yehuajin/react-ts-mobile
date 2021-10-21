@@ -1,0 +1,8 @@
+dist/
+node_modules/
+# Editor directories and files
+.idea/
+.history/*
+#ide
+.vscode/*
+src/assets/font/icon-fonts/icon.css

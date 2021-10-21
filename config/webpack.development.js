@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 const notifier = require('node-notifier');
 // const ICON = join(__dirname, 'icon.png');
 const prot = 8080;
@@ -60,5 +61,6 @@ module.exports = {
         });
       },
     }),
+    new StylelintPlugin(),
   ],
 };

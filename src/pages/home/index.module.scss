@@ -3,13 +3,14 @@
   margin: auto;
   color: red;
   font-size: 16px;
+
   &.center-no-module {
     font-size: 28px;
   }
 }
+
 :global {
   .center {
     font-weight: bold;
   }
 }
-
