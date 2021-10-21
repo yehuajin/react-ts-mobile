@@ -26,16 +26,16 @@ module.exports = {
       name: false,
       moduleIds: 'deterministic',
       cacheGroups: {
-        // commons: {
-        //   chunks: 'initial', // 同步代码
-        //   minChunks: 2, // 至少引用2次
-        //   name: 'commons',
-        // },
-        vendor: {
-          test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
-          chunks: 'all',
+        commons: {
+          chunks: 'initial', // 同步代码
+          minChunks: 2, // 至少引用2次
+          name: 'commons',
         },
+        // vendor: {
+        //   test: /[\\/]node_modules[\\/](react|react-dom)[\\/]/,
+        //   name: 'vendor',
+        //   chunks: 'all',
+        // },
         // default: {
         //   minChunks: 2,
         //   priority: -20,
