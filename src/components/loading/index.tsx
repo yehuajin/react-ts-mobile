@@ -1,10 +1,7 @@
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 import style from './index.module.scss';
 
-interface props {
-  children?: ReactNode;
-}
-const Loading: FC<props> = () => {
+const Loading: FC<Record<string, never>> = () => {
   return <div className={style.loading}>数据加载中...</div>;
 };
 

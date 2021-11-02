@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route, RouteProps } from 'react-router
 import Loading from '@components/loading';
 import NotFound from '@components/not-found';
 import envConfig from '@config';
+
 const Home = React.lazy(() => import('@pages/home'));
 const IconList = React.lazy(() => import('@pages/icon-list'));
 
@@ -26,12 +27,12 @@ const Routes: FC = () => {
     <Router basename={envConfig.basename}>
       <Suspense fallback={<Loading />}>
         <Switch>
-          {routes.map((route, index) => {
+          {routes.map((route) => {
             const { path, exact, component } = route;
             const LazyCom = component;
             return (
               <Route
-                key={index}
+                key={`${path}`}
                 path={path}
                 exact={exact}
                 render={(props) => {

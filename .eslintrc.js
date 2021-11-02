@@ -4,10 +4,27 @@
 // 最后是提供给 webpack 的 eslint-loader，可以在使用 webpack-dev-server 开发中实时检查，越早发现错误越好解决。
 module.exports = {
   parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: 'module',
+    project: './tsconfig.json',
+    ecmaFeatures: {
+      jsx: true,
+      typescript: true,
+      tsx: true,
+    },
+  },
   plugins: ['@typescript-eslint/eslint-plugin', 'react'],
-  extends: ['plugin:prettier/recommended', 'alloy', 'alloy/react', 'alloy/typescript'],
+  extends: [
+    'plugin:prettier/recommended',
+    'airbnb',
+    'airbnb-typescript',
+    'airbnb/hooks',
+    'plugin:@typescript-eslint/recommended',
+  ],
   settings: {
     react: {
+      pragma: 'React',
       version: 'detect',
     },
   },
@@ -16,7 +33,7 @@ module.exports = {
     // Your environments (which contains several predefined global variables)
     //
     browser: true,
-    // node: true,
+    node: true,
     // mocha: true,
     // jest: true,
     // jquery: true
@@ -37,6 +54,8 @@ module.exports = {
         endOfLine: 'auto',
       },
     ],
+    'arrow-body-style': 0,
+    'object-curly-newline': 0,
     'func-names': 0,
     'no-underscore-dangle': 0,
     'no-unused-vars': [2, { args: 'none' }],

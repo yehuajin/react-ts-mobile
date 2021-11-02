@@ -1,7 +1,7 @@
 module.exports = {
   processors: [],
-  plugins: ['stylelint-order'],
-  extends: 'stylelint-config-standard', // 这是官方推荐的方式
+  plugins: ['stylelint-order', 'stylelint-declaration-block-no-ignored-properties'],
+  extends: ['stylelint-config-standard', 'stylelint-config-prettier'], //, 'stylelint-config-rational-order'
   rules: {
     'at-rule-empty-line-before': 'always' | 'never',
     'at-rule-name-case': 'lower' | 'upper',
@@ -15,5 +15,7 @@ module.exports = {
     'comment-empty-line-before': false,
     'value-list-comma-newline-after': false,
     'declaration-colon-newline-after': false,
+    'rule-empty-line-before': false,
   },
+  ignoreFiles: ['node_modules/**/*', 'dist/**/*'],
 };

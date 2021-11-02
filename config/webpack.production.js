@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const config = require('./index');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 
 module.exports = {
   mode: 'production',
@@ -60,7 +61,7 @@ module.exports = {
     ],
   },
   devtool: 'source-map',
-  target: ['web', 'es5'],
+  target: 'browserslist', // 开发环境设置该值，或者package.json中设置browserslist会影响热更新
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack-ts-demo',
@@ -81,5 +82,6 @@ module.exports = {
         },
       ],
     }),
+    new BundleAnalyzerPlugin(),
   ],
 };

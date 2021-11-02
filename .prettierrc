@@ -1,0 +1,18 @@
+{
+  "trailingComma": "all",
+  "tabWidth": 2,
+  "semi": true,
+  "singleQuote": true,
+  "endOfLine": "lf",
+  "printWidth": 120,
+  "bracketSpacing": true,
+  "//1": "arrowParens: always",
+  "//2": "trailingComma：Object的最后一个属性末尾也会添加",
+  "//3": "tabWidth：缩进大小，和EditorConfig保持一致。",
+  "//4": "semi：分号是否添加",
+  "//5": "singleQuote：是否单引号",
+  "//6": "endOfLine：和EditorConfig保持一致。",
+  "//7": "printWidth：单行代码最长字符长度，超过之后会自动格式化换行。",
+  "//8": "bracketSpacing：在Object中的括号之间加入空格。",
+  "//9": "arrowParens：箭头函数的参数无论有几个，都要括号包裹。"
+}

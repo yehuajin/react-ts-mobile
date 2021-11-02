@@ -20,6 +20,7 @@ const cssLoaders = [
   {
     loader: 'css-loader',
     options: {
+      sourceMap: !_envFlag,
       importLoaders: 1, // 0 => 无loader(默认); 1 => postcss-loader; 2 => postcss-loader, sass-loader; 用于配置css-loader作用于@import 的资源之前有多少个loader
       modules: {
         auto: (resourcePath) => resourcePath.endsWith('.module.scss'),
@@ -37,8 +38,21 @@ const cssLoaders = [
     loader: 'postcss-loader',
     options: {
       postcssOptions: {
-        plugins: () => [require('autoprefixer')({ browsers: ['> 1%', 'ie >= 9'] })],
+        plugins: [
+          'postcss-flexbugs-fixes',
+          [
+            'postcss-preset-env',
+            {
+              autoprefixer: {
+                grid: true,
+                flexbox: 'no-2009',
+              },
+            },
+          ],
+          'postcss-normalize',
+        ],
       },
+      sourceMap: !_envFlag,
     },
   },
 ];
@@ -116,12 +130,12 @@ const webpackBaseConfig = {
   plugins: [].concat(
     _envFlag
       ? [
-          new MiniCssExtractPlugin({
-            filename: `${config.assets}/styles/[name].[contenthash:5].css`,
-            chunkFilename: `${config.assets}/styles/[id].[contenthash:5].css`,
-            ignoreOrder: true, // 忽略css文件引入的顺序，如果不设置在不能的js中引入css顺序不同就会产生警告
-          }),
-        ]
+        new MiniCssExtractPlugin({
+          filename: `${config.assets}/styles/[name].[contenthash:5].css`,
+          chunkFilename: `${config.assets}/styles/[id].[contenthash:5].css`,
+          ignoreOrder: true, // 忽略css文件引入的顺序，如果不设置在不能的js中引入css顺序不同就会产生警告
+        }),
+      ]
       : []
   ),
 };

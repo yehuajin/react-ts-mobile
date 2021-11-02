@@ -1,10 +1,7 @@
 import style from './index.module.scss';
-import React, { FC, ReactNode } from 'react';
+import React, { FC } from 'react';
 
-interface props {
-  children?: ReactNode;
-}
-const Home: FC<props> = (props) => {
+const Home: FC<Record<string, never>> = (props) => {
   console.log(props);
   return <div className={`${style.color} center`}>home</div>;
 };

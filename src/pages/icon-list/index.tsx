@@ -5,25 +5,25 @@ import iconList from '@assets/font/icon-fonts/icon.json';
 import base64 from 'base-64';
 import utf8 from 'utf8';
 
-interface iconObj {
+interface IconObj {
   name: string;
   code: string;
-  children?: iconObj[];
+  children?: IconObj[];
 }
-const Icon: FC<{}> = () => {
+const Icon: FC<Record<string, never>> = () => {
   let icons = base64.decode(iconList.replace('data:application/json;base64,', ''));
   icons = utf8.decode(icons);
-  const list: iconObj[] = JSON.parse(icons.replace(';', ''));
+  const list: IconObj[] = JSON.parse(icons.replace(';', ''));
 
   return (
     <div className={css.content}>
       <div>icon列表</div>
-      {list.map((item: iconObj) => {
+      {list.map((item: IconObj) => {
         return (
           <div key={item.code}>
             {item.name}：
             <div className={css.item}>
-              {item.children?.map((icon: iconObj) => {
+              {item.children?.map((icon: IconObj) => {
                 return (
                   <span key={icon.code}>
                     <i className={`xf-icon-${icon.code}`}></i>

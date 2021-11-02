@@ -36,6 +36,7 @@ module.exports = {
     },
   },
   devtool: 'eval-source-map',
+  target: 'web',
   plugins: [
     new HtmlWebpackPlugin({
       title: 'webpack-ts-demo',
@@ -55,7 +56,7 @@ module.exports = {
         const error = errors[0];
         notifier.notify({
           title: 'Webpack error',
-          message: severity + ': ' + error.name,
+          message: `${severity}: ${error.name}`,
           subtitle: error.file || '',
           // icon: ICON,
         });

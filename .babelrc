@@ -1,5 +1,14 @@
 {
-  "presets": [["@babel/preset-env"], "@babel/preset-react", "@babel/preset-typescript"],
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "modules": false // modules 防止 babel 将任何模块类型都转译成 CommonJS 类型
+      }
+    ],
+    "@babel/preset-react",
+    "@babel/preset-typescript"
+  ],
   "plugins": [
     [
       // 通过babel-plugin-import实现按需加载

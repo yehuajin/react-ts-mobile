@@ -1,0 +1,25 @@
+{
+  "search.exclude": {
+    "**/node_modules": true,
+    "dist": true,
+    "yarn.lock": true
+  },
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // search.exclude：哪些文件例外
+  // editor.formatOnSave：保存时执行格式化代码
+  // esbenp.prettier：使用prettier来格式化代码
+  // 这里默认所有的代码都会调用prettier来做格式化。
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "typescript.tsdk": "./node_modules/typescript/lib", // typescript.tsdk：替代 vscode 的 ts 语法智能提示
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.stylelint": true
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "Wscats.eno"
+  }
+}
