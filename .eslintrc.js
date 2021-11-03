@@ -9,7 +9,6 @@ module.exports = {
     sourceType: 'module',
     project: './tsconfig.json',
     ecmaFeatures: {
-      jsx: true,
       typescript: true,
       tsx: true,
     },
