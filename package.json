@@ -26,6 +26,8 @@
   "homepage": "https://github.com/yehuajin/react-ts#readme",
   "devDependencies": {
     "@babel/core": "^7.14.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.0",
     "@babel/preset-env": "^7.14.8",
     "@babel/preset-react": "^7.14.5",
     "@babel/preset-typescript": "^7.15.0",
@@ -78,11 +80,13 @@
     "stylelint-order": "^4.1.0",
     "stylelint-webpack-plugin": "^3.0.1",
     "webpack": "^5.44.0",
+    "webpack-bundle-analyzer": "^4.5.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2",
     "webpack-merge": "^5.8.0"
   },
   "dependencies": {
+    "@babel/runtime-corejs3": "^7.16.0",
     "antd": "^4.16.13",
     "antd-mobile": "^2.3.4",
     "axios": "^0.22.0",

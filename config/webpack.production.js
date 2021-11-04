@@ -19,13 +19,13 @@ module.exports = {
     runtimeChunk: {
       name: 'runtime',
     },
+    moduleIds: 'deterministic',
     splitChunks: {
       chunks: 'async', // initial、all、函数
       minChunks: 1,
       maxAsyncRequests: 5,
       maxInitialRequests: 3,
       name: false,
-      moduleIds: 'deterministic',
       cacheGroups: {
         commons: {
           chunks: 'initial', // 同步代码
